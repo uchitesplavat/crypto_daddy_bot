@@ -17,7 +17,7 @@ sudo dnf install -y libcurl-devel
 sudo dnf install -y pugixml-devel
 
 # Install nlohmann-json
-sudo dnf install -y nlohmann-json-devel
+sudo dnf install -y json-devel
 
 # Clone and build TgBot-cpp
 git clone https://github.com/reo7sp/tgbot-cpp.git
@@ -25,7 +25,7 @@ cd tgbot-cpp
 cmake .
 make
 sudo make install
-cd ..
+cd 
 
 # Clone and build CPR
 git clone https://github.com/whoshuu/cpr.git
@@ -35,10 +35,6 @@ cd build
 cmake ..
 make
 sudo make install
-cd ../..
-
-# Clean up
-rm -rf tgbot-cpp
-rm -rf cpr
+cd
 
 echo "All dependencies have been installed."
