@@ -103,9 +103,9 @@ bool contains_prohibited_words(const std::string& message, const std::vector<std
 }
 
 int main() {
-    TgBot::Bot bot("6290187456:AAE5MO_JTBrQHPUfh_hwqW72B1NDC7BIp7g");
+    TgBot::Bot bot("api_key");
 
-    std::vector<std::string> prohibited_words = {"Гей", "гей", "Долбаеб", "долбаеб","scam", "скам", "Скам", "скамье", "Scam", "pidor", "пидор", "пидарас", "Pidor", "Пидор", "Пидарас", "admin", "админ", "Admin", "Админ", "Педик", "Негр", "Нига", "педик", "негр", "нига"};
+    std::vector<std::string> prohibited_words = {prohibited_words};
 
     bot.getEvents().onCommand("help", [&bot](TgBot::Message::Ptr message) {
         TgBot::InlineKeyboardMarkup::Ptr keyboard(new TgBot::InlineKeyboardMarkup);
